@@ -1,6 +1,7 @@
 # DockerizeNetlogo
 Scripts to create a Docker container that would run a netlogo experiment starting from an xml file.
-This is coming from a simulation of organized crime (thus the OC name that will appear in several places)
+This is coming from a simulation of organized crime (thus the OC name that will appear in several places).
+Use with caution (it will access your .ssh keys quite liberally).
 
 # setup
 
