@@ -1,6 +1,6 @@
 # DockerizeNetlogo
 Scripts to create a Docker container that would run a netlogo experiment starting from an xml file.
-This is coming from a simulation of organized crime (thus the OC name that will appear in several places)
+This is coming from a simulation of organized crime. Thus, the OC name that will appear in several places - substitute your own lab(el) for labss(OC).
 
 # setup
 
@@ -17,12 +17,12 @@ This is coming from a simulation of organized crime (thus the OC name that will 
 ## create the netlogo base:
 from the netlogo-docker directory 
 ```
-cd docker/netlogo-docker/
+cd netlogo-docker/
 docker build --tag=labss/netlogo-base .
 ```
 
 ## create the OC docker from a release
-from the docker directory
+from the base directory
 ```
 cd ..
  docker build --tag=labss/oc --build-arg SSH_KEY="$(cat ~/.ssh/id_rsa)" --build-arg OC_VERSION='v0.3' .
@@ -59,7 +59,7 @@ docker ps --filter "status=exited" | grep 'weeks ago' | awk '{print $1}' | xargs
 
 ## push the container on the online repository
 ```
-docker push labss/protont
+docker push labss/protonoc
 ```
 ## share results (in the directory to share; turn off other servers on 80, like R)
 ```
